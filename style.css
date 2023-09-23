@@ -94,8 +94,6 @@ form input[type=submit]:hover {
     box-shadow: 0.5px 0.5px 5px 1px var(--corBotaoHover);
 }
 
-
-
 form a {
     text-decoration: none;
     color: var(--corFont);
@@ -114,4 +112,8 @@ form a:hover {
 
 form a:visited {
     color: var(--corFont);
+}
+
+.cadatrar-text:hover{
+    cursor:pointer;
 }

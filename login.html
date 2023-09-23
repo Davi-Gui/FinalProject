@@ -13,13 +13,15 @@
     <title>Login</title>
 </head>
 <body>
+    <script src="scrpits.js">
+    </script>
         <main id="form-container">
             <div class="container">
                 <form id="formulario">
-                    <h1>Login</h1>
+                    <h1 id="title">Login</h1>
 
                     <div class="input-single">
-                        <input type="text" id="input-email" class="input" required>
+                        <input type="text" id="input-email" class="input input-email" required>
                         <label for="input-email">Email</label>
                     </div>
                 
@@ -28,9 +30,9 @@
                         <label for="input-senha">Senha</label>
                     </div>
 
-                    <div class="btn"><input type="submit" value="Entrar"></div>
+                    <div class="btn"><input id="butao" type="submit" value="Entrar"></div>
 
-                    <a href="cadastro.html">Não tem uma conta? Cadastre-se!</a>
+                    <p onclick="cadastrar()" id="cadatrar-text" class="cadatrar-text">Não tem uma conta? Cadastre-se!<p>
                 
                 </form>
             </div>
