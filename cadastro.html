@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@100;200&display=swap" rel="stylesheet">
+
+    <title>Login</title>
+</head>
+<body>
+    <script src="scrpits.js" ></script>
+    <script src="autentication.js"></script>
+    <script src="carregando.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.4.0/firebase-app-compat.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/10.4.0/firebase-auth-compat.js"></script>
+       
+    <script src="firebase-init.js"></script>
+
+        <main id="form-container" >
+            
+            <div class="container" >
+                
+                <form id="formulario-cadastro" class="form-cadastro">
+                    <div id="carregando"></div>
+                    <h1 id="title">Cadastro</h1>
+
+                    <div class="input-single">
+                        <input type="email" id="input-email-cadastro" class="input input-email" required>
+                        <label for="input-email">Email</label>
+                    </div>
+                
+                    <div class="input-single">
+                        <input type="password" id="input-senha-cadastro" class="input" required>
+                        <label for="input-senha">Senha</label>
+                    </div>
+                    
+                    <div class="input-single">
+                        <input type="password" id="input-senha-cadastro-confirmar" class="input" required>
+                        <label for="input-senha">Confirmar senha</label>
+                    </div>
+
+                    <div class="btn"><button onclick="cadastrarNovoUser()" id="cadastr-button"  type="button"  value="Entrar" aria-placeholder="Entrar">Cadastrar</button></div>
+
+                
+                </form>
+            </div>
+        </main>
+    </body>
+</html>

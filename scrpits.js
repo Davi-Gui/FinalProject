@@ -41,7 +41,10 @@ function criarCampoInput(id, inputClass, labelFor, labelText, isRequired) {
     // Retorna a div criada
     return divInputNome;
 }
-
+function teste ()
+{
+    alert("cu")
+}
 function cadastrar()
 {
 
@@ -73,4 +76,9 @@ cadastrarTexto.innerText = ""
 function registrarConta()
 {
     alert("penis")
+}
+
+function registrar ()
+{
+    window.location.href = "cadastro.html"
 }

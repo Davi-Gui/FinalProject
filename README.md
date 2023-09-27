@@ -47,3 +47,50 @@
                   color: ;
                             }
             )
+
+!! Mudanças (JP) - 27/09 - 19:23 !!
+    -> Geral:
+        Desisti de criar elementos ao clicar em criar cadastro;
+        Implementei o login e cadastro (1);
+    
+    -> Html:
+        * "Criei" uma nova página pra cadastro
+        * Em login.html, mudei o <input type="button"> pra <button>
+        * Adicionei scripts:
+             <script src="scrpits.js" ></script>
+                (Arquivo proprio, meio inutil agr)
+             <script src="autentication.js"></script>
+                (Arquivo proprio, cria as funções de login e cadastro)
+             <script src="carregando.js"></script>
+                (Animação de loading)
+             <script src="https://www.gstatic.com/firebasejs/10.4.0/firebase-app-compat.js"></script>
+                (Arquivo externo, importa funções do Firebase)
+             <script src="https://www.gstatic.com/firebasejs/10.4.0/firebase-auth-compat.js"></script>
+                (Arquivo externo, importa funções do Firebase)
+             <script src="firebase-init.js"></script>
+                (Inicia Firebase)
+
+    -> CSS:
+        Adicionei uma classe pra lidar com a animação de loading
+
+    -> JavaScript
+        - autentication.js
+            *function login () 
+                (Usa a função auth() do Firebase pra enviar os dados dos inputs para o banco de dados, testa se esta tudo correto, se sim, envia o usuario para a tela principal (2), se não, mostra o erro)
+            * function senhas()
+                (Testa se a senha e a confirmação da senha (cadastro) são iguais)
+            *function function cadastrarNovoUser()
+                (Usa a função auth() do Firebase pra enviar os dados dos inputs para o banco de dados, se tudo der certo, envia o user pra tela de login)
+        
+        - carregando.js
+            *function mostrarCarregamento()
+                (Cria o elemento <div> pra animação de loading)
+            *function esconderCarregamento()
+                (Apaga o elemento <div>)
+
+    -> Problemas
+        (Geral) - O código ta porco.
+        
+        (1) - Não há alternação entre o admin e user normal
+
+        (2) - Não há alternação entre o admin e user normal

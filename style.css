@@ -93,6 +93,19 @@ form input[type=submit]:hover {
     font-size: 15px;
     box-shadow: 0.5px 0.5px 5px 1px var(--corBotaoHover);
 }
+button:hover{
+    font-size: 15px;
+    box-shadow: 0.5px 0.5px 5px 1px var(--corBotaoHover);
+}
+button {
+    padding: 10px 40px;
+    border-radius: 10px;
+    cursor: pointer;
+
+    background-color: var(--corFont);
+    color: #FFF;
+    box-shadow: 0.5px 0.5px 2px;
+}
 
 form a {
     text-decoration: none;
@@ -117,3 +130,43 @@ form a:visited {
 .cadatrar-text:hover{
     cursor:pointer;
 }
+.form-cadastro{
+    height: 500px;
+}
+.loader {
+    
+    
+    margin: -2rem 6.6rem auto;
+
+    padding-top: -1rem;
+    padding-bottom: -1rem;
+    border: 20px solid #EAF0F6;
+  
+  
+    border-radius: 50%;
+  
+  
+    border-top: 20px solid #FF7A59;
+  
+  
+    width: 50px;
+  
+  
+    height: 50px;
+  
+    animation: spinner 4s linear infinite;
+  
+  
+  }
+  
+  @keyframes spinner {
+  
+  
+    0% { transform: rotate(0deg); }
+  
+  
+    100% { transform: rotate(360deg); }
+  
+  
+  }
+  

@@ -13,29 +13,38 @@
     <title>Login</title>
 </head>
 <body>
-    <script src="scrpits.js">
-    </script>
+    
         <main id="form-container">
+            
             <div class="container">
+                
                 <form id="formulario">
+                    <div id="carregando"></div>
                     <h1 id="title">Login</h1>
 
                     <div class="input-single">
-                        <input type="text" id="input-email" class="input input-email" required>
+                        <input type="email" id="input-email" class="input input-email" required>
                         <label for="input-email">Email</label>
                     </div>
                 
                     <div class="input-single">
-                        <input type="text" id="input-senha" class="input" required>
+                        <input type="password" id="input-senha" class="input" required>
                         <label for="input-senha">Senha</label>
                     </div>
+                    
+                    <div class="btn"><button onclick="login(), mostrarCarregamento()" id="login-button"  type="button"  value="Entrar" aria-placeholder="Entrar">Entrar</button></div>
 
-                    <div class="btn"><input id="butao" type="submit" value="Entrar"></div>
-
-                    <p onclick="cadastrar()" id="cadatrar-text" class="cadatrar-text">Não tem uma conta? Cadastre-se!<p>
+                    <p onclick="registrar ()" id="cadatrar-text" class="cadatrar-text">Não tem uma conta? Cadastre-se!<p>
                 
                 </form>
             </div>
         </main>
-</body>
+        <script src="scrpits.js" ></script>
+        <script src="autentication.js"></script>
+        <script src="carregando.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/10.4.0/firebase-app-compat.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/10.4.0/firebase-auth-compat.js"></script>
+       
+        <script src="firebase-init.js"></script>
+    </body>
 </html>
