@@ -1,14 +1,54 @@
-function login ()
-{
-    firebase.auth().signInWithEmailAndPassword
-    (document.getElementById("input-email").value,document.getElementById("input-senha").value).then(response => {
-        window.location.href = "cliente.html"
-        esconderCarregamento()
+import { initializeApp } from "https://www.gstatic.com/firebasejs/9.15.0/firebase-app.js"
+import { getDatabase, ref, push , onValue, remove} from "https://www.gstatic.com/firebasejs/9.15.0/firebase-database.js"
+const appSetting = {
+    databaseURL: "https://william-4c1b4-default-rtdb.firebaseio.com/"
+}
+const app = initializeApp(appSetting)
+const database = getDatabase(app)
+const adminsInDB = ref(database,"Admins")
+
+const butaoLogin = document.getElementById("login-button")
+let where = "login"
+
+
+function admin(callback) {
+    onValue(adminsInDB, function (snapshot) {
+        let user = document.getElementById("input-email").value;
+        let adminsArray = Object.values(snapshot.val());
+
+        for (let i = 0; i < adminsArray.length; i++) {
+            if (user == adminsArray[i]) {
+                callback(true); 
+                return;
+            }
+        }
+
+        callback(false);
+    });
+}
+if (butaoLogin) {
+butaoLogin.addEventListener("click", function () {
+    firebase.auth().signInWithEmailAndPassword(
+        document.getElementById("input-email").value,
+        document.getElementById("input-senha").value
+    ).then(response => {
+        admin(function (isAdmin) {
+            if (isAdmin) {
+                window.location.href = "admin.html";
+            } else {
+                window.location.href = "cliente.html";
+            }
+            esconderCarregamento();
+            
+        });
     }).catch(error => {
-        esconderCarregamento()
-        alert(mensagemDeErro(error))
-    })
-} 
+        document.getElementById("input-email").value = ""
+        
+        esconderCarregamento();
+        alert(mensagemDeErro(error));
+    });
+});
+}
 
 function mensagemDeErro(error)
 {
@@ -31,35 +71,36 @@ function senhas()
     return false
 }
 
-function cadastrarNovoUser()
-{
-    mostrarCarregamento()
-    let taBlz 
-    if (senhas()){
-        alert ("ta beleza")
-        taBlz = true
-        
-    }
-    else if (!senhas()){
-        alert("ta ruijm")
-        taBlz = false
+    const butaoCadastro = document.getElementById("cadastr-button");
+    if (butaoCadastro) { 
+        butaoCadastro.addEventListener("click", function () {
+            mostrarCarregamento();
+            let taBlz;
+            if (senhas()) {
+                
+                taBlz = true;
+            } else {
+                alert("Preencha corretamente os campos");
+                taBlz = false;
+            }
+
+            if (taBlz) {
+                const email = document.getElementById("input-email-cadastro").value;
+                const senha = document.getElementById("input-senha-cadastro").value;
+                firebase
+                    .auth()
+                    .createUserWithEmailAndPassword(email, senha)
+                    .then(() => {
+                        esconderCarregamento();
+                        window.location.href = "login.html";
+                    })
+                    .catch((error) => {
+                        esconderCarregamento();
+                        alert(mensagemDeErro(error));
+                    });
+            }
+        });
     }
 
 
-    if (taBlz)
-    {
-    const email = document.getElementById("input-email-cadastro").value
-    const senha = document.getElementById("input-senha-cadastro").value
-    firebase.auth().createUserWithEmailAndPassword
-    (email,senha
-    ).then(() => {
-        esconderCarregamento()
-        window.location.href = "login.html"
-    }).catch(error =>{
-        esconderCarregamento()
-        alert(mensagemDeErro(error))
-    })
-    
-    
-}
-}
+

@@ -80,5 +80,6 @@ function registrarConta()
 
 function registrar ()
 {
+    
     window.location.href = "cadastro.html"
 }
