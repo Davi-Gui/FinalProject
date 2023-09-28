@@ -94,3 +94,25 @@
         (1) - Não há alternação entre o admin e user normal
 
         (2) - Não há alternação entre o admin e user normal
+
+
+!! Mudanças (Davi) - 27/09 - 20:00 !!
+
+    -> Geral:
+        Remoção da página "cadastro.html", visto que optamos por outra abordagem;
+
+    -> Html, Css e JavaScript:
+        Pequena alteração na class e id de "cadatrar-text" para "cadastrar-text";
+
+    -> Html:
+        Estruturação da página "cliente.html";
+        Estruturação da página "admin.html";
+
+    -> Css:
+        Alteração de estilo do parágrafo "Não tem uma conta? Cadastre-se!", e também sua centralização;
+        Adição e estilização do arquivo "cliente.css";
+        Adição e estilização do arquivo "admin.css";
+
+    -> Problemas:
+        No campo e-mail de página login, o label "E-mail" está descendo e ficando em cima do texto digitdo, porém se digitado um e-mail válido isso não ocorre;
+        

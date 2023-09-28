@@ -70,7 +70,7 @@ form .input-single .input:focus ~ label,
 form .input-single .input:valid ~ label{
     transform: translateY(-30px);
     font-size: 12px;
-    color: var(--corFont)
+    color: var(--corFont);
 }
 
 .btn {
@@ -107,27 +107,28 @@ button {
     box-shadow: 0.5px 0.5px 2px;
 }
 
-form a {
+form p {
     text-decoration: none;
     color: var(--corFont);
     font-weight: bold;
     font-size: 14px;
 
-    position: absolute;
+    text-align: center;
     margin: 0 0;
     padding: 0 auto;
     
 }
 
-form a:hover {
-    color: ;
+form p:hover {
+    color: var(--corBotaoAnimacao);
 }
 
-form a:visited {
+form p:visited {
     color: var(--corFont);
 }
 
-.cadatrar-text:hover{
+
+.cadastrar-text:hover{
     cursor:pointer;
 }
 .form-cadastro{

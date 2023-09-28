@@ -58,7 +58,7 @@ var novoCampo = criarCampoInput("input-nome", "input", "input", "Nome", true);
 
 // Tira o texto de castrar
 
-var cadastrarTexto = document.getElementById("cadatrar-text")
+var cadastrarTexto = document.getElementById("cadastrar-text")
 cadastrarTexto.innerText = ""
 
  // Aumentar o tamanho do container para suportar os novos elementos

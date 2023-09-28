@@ -1,0 +1,56 @@
+:root {
+    --corFundo: #AAAAAA;
+    --corPrincipal: #FFF;
+    --corFont: #002247;
+    --corBotaoHover: #0E2F52c0;
+    --corBotaoAnimacao: #004794;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Urbanist', sans-serif;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    background-color: var(--corFundo);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 90vh;
+    width: 90%;
+    max-width: 1000px;
+}
+
+.formatacao-geral {
+    text-align: center;
+    margin: 10px 0;
+}
+
+.titulo {
+    margin-top: 10%;
+    display: block;
+}
+
+.container-tabela {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+td, tr {
+    border-left: 2px solid var(--corBotaoAnimacao);
+}
+
+.tabela {
+    
+}
