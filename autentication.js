@@ -64,7 +64,7 @@ function senhas()
     const senha1 = document.getElementById("input-senha-cadastro")
     const senha2 = document.getElementById("input-senha-cadastro-confirmar")
 
-    alert(senha1.value)
+    
     if (senha1.value == senha2.value)
         return true
 

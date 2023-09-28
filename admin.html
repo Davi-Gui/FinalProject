@@ -14,24 +14,33 @@
 <body>
     <script src="scrpits.js">
     </script>
+    <script src="admin.js" type="module"></script>
+    <header class="header" id="admin">
+        <h1 class="logo"><a href="#">Flexbox</a></h1>
+    <ul class="main-nav">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Portfolio</a></li>
+        <li><a href="#">Contact</a></li>
+    </ul>
+    </header> 
 
     <div class="container">
         <section class="formatacao-geral">
-            <p class="titulo">Clientes</p>
+            <p class="titulo">Administradores registrados</p>
 
-            <div class="container-tabela">
+            <div class="container-tabela" id="tabela">
                 <table class="tabela">
 
                     <tr>
-                        <th>Nome</th>
-                        <th>E-mail</th>
-                        <th>Hash Senha</th>
+                       
+                        <th id="email-admins">E-mail</th>
+                        <th id="id-admins">ID</th>
                     </tr>
 
                     <tr>
-                        <td>Vazio</td>
-                        <td>Vazio@provedor.com</td>
-                        <td>0x86d77436c31a50cea671be9a2fe36c25b38c77dc730f8bc63faa591d0bed8c88</td>
+                        
+                       
                     </tr>
 
                 </table>

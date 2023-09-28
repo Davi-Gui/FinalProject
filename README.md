@@ -115,4 +115,9 @@
 
     -> Problemas:
         No campo e-mail de página login, o label "E-mail" está descendo e ficando em cima do texto digitdo, porém se digitado um e-mail válido isso não ocorre;
-        
+
+!! Mudanças (Davi) - 27/09 - 20:00 !!
+    -> Geral:
+        * Adcionei o cadastro.html de volta
+        * Fiz um sistema pra separar cliente de admin
+        * Corrigi o erro do label    
