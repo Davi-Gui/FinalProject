@@ -158,3 +158,18 @@ a {
 	}
 
 }
+input {
+    width: 30%;
+}
+button {
+    margin: 10px 0;
+    width: 30%;
+}
+
+.remove 
+{
+    width: 15px;
+    height: 15px;
+    background-color: red;
+    text-align: center;
+}
