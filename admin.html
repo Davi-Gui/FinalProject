@@ -15,15 +15,6 @@
     <script src="scrpits.js">
     </script>
     <script src="admin.js" type="module"></script>
-    <header class="header" id="admin">
-        <h1 class="logo"><a href="#">Flexbox</a></h1>
-    <ul class="main-nav">
-        <li><a href="#">Home</a></li>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Portfolio</a></li>
-        <li><a href="#">Contact</a></li>
-    </ul>
-    </header> 
 
     <div class="container">
         <section class="formatacao-geral">
@@ -33,7 +24,6 @@
                 <table class="tabela">
 
                     <tr>
-                       
                         <th id="email-admins">E-mail</th>
                         <th id="id-admins">ID</th>
                     </tr>
@@ -47,12 +37,22 @@
 
             </div>
         </section>
-        <label>Email do Admin</label>
-        <input type="text" id="novoAdmin">
-        <button type="button" id="butaoAdminADD">ADD</button>
-        <input type="text" id="removeAdmin">
-        <button type="button" id="butaoAdminREMOVE">REMOVE</button>
+
+        <div class="formatacao-geral">
+            <div class="container-admin">
+                <input type="text" class="caixa-texto" id="novoAdmin" placeholder="Adicionar Administrador">
+                <button type="button" class="btn" id="butaoAdminADD">ADD</button>
+            </div>
+
+            <div class="container-admin">
+                <input type="text" class="caixa-texto" id="removeAdmin" placeholder="Remover Administrador">
+                <button type="button" class="btn" id="butaoAdminREMOVE">REMOVE</button>
+            </div>
+        </div>
+        
         <section class="formatacao-geral">
+
+
             <p class="titulo">Produtos</p>
 
             <div class="container-tabela">
@@ -93,7 +93,7 @@
                         <td>jose@gmail.com</td>
                         <td>Cadeira Extensora</td>
                         <td>1</td>
-                    <td>Crédito,10x</td>
+                        <td>Crédito,10x</td>
                     </tr>
 
                 </table>
