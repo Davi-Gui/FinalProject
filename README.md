@@ -121,3 +121,10 @@
         * Adcionei o cadastro.html de volta
         * Fiz um sistema pra separar cliente de admin
         * Corrigi o erro do label    
+
+!! Mudanças (Davi) - 31/10 - 17:00 !!
+
+    -> Html:
+        * Alteração do título da página "admin.html" para Administrador.
+    -> Css:
+        * Reformulção do css da página "admin.html".
